@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frieze Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+  <div class="c-header">
+    <div class="o-container">
+      <div class="c-header__content">
+        <div class="c-site-logo">
+          <img src="assets/icons/frieze-logo.svg"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="o-container">
+    <h2 class="c-page-title">Near You</h2>
+  </div>
+  <div class="c-map-panel c-map-panel--closed">
+    <div class="c-map-panel_button">
+      <img src="/assets/icons/arrow.png"/>
+    </div>
+    <div class="c-map-panel__inner">
+      <div class="c-map-search"></div>
+      <div class="c-map-user-location">
+        <span class="c-map-panel__title">Location</span>
+        <input type="checkbox" class="c-map-user-location__check"><span class="c-map-user-location__title">Search near me</span> <img src="/assets/icons/near-me.png"/>
+      </div>
+      <div class="c-map-panel-date">
+        <span class="c-map-panel__title">Date</span>
+        <input type="checkbox" class="c-map-panel-date__check">
+        <input class="c-date-picker" type="date">
+      </div>
+      <ul class="c-map-filters">
+        <span class="c-map-panel__title">Interests</span>
+        <li class="c-map-filters__filter vip">
+          <input class="c-map-filters__filter-input" type="checkbox" checked name="VIP Program"/>
+          <span class="c-map-filters__filter-title">VIP Program</span>
+        </li>
+        <li class="c-map-filters__filter profit">
+          <input class="c-map-filters__filter-input" type="checkbox" checked name="Non Profits and Institutions"/>
+          <span class="c-map-filters__filter-title">Non Profits and Institutions</span>
+        </li>
+        <li class="c-map-filters__filter chelsea">
+          <input class="c-map-filters__filter-input" type="checkbox" checked name="Chelsea Night"/>
+          <span class="c-map-filters__filter-title">Chelsea Night</span>
+        </li>
+        <li class="c-map-filters__filter east-side">
+          <input class="c-map-filters__filter-input" type="checkbox" checked name="Upper East Side Morning"/>
+          <span class="c-map-filters__filter-title">Upper East Side Morning</span>
+        </li>
+        <li class="c-map-filters__filter soho">
+          <input class="c-map-filters__filter-input" type="checkbox" checked name="LES and Soho Morning"/>
+          <span class="c-map-filters__filter-title">LES and Soho Morning</span>
+        </li>
+        <li class="c-map-filters__filter hotels">
+          <input class="c-map-filters__filter-input" type="checkbox" checked name="Hotels"/>
+          <span class="c-map-filters__filter-title">Hotels</span>
+        </li>
+        <li class="c-map-filters__filter restaurants">
+          <input class="c-map-filters__filter-input" type="checkbox" checked name="Restaurants"/>
+          <span class="c-map-filters__filter-title">Restaurants</span>
+        </li>
+      </ul>
+      <div class="c-map-search-button">Search</div>
+    </div>
+  </div>
+  <div class="c-map-info c-map-info--closed">
+    <div class="c-map-info_button">
+      <span class="c-map-info_button-bar c-map-info_button-bar1"></span>
+      <span class="c-map-info_button-bar c-map-info_button-bar2"></span>
+      <span class="c-map-info_button-bar c-map-info_button-bar3"></span>
+    </div>
+    <div class="c-map-info__content">
+
+    </div>
+  </div>
+  <div id="app-map" class="c-app-map"></div>
+
+  <script src="js/app.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhVwSyTqeJhyovtHAR8lr-MGD5MAd4UD8&libraries=places&callback=frieze.map.init" async defer></script>
+</body>
+</html>
